@@ -1,0 +1,159 @@
+/* achievements section */
+
+.achievements-section-bg {
+  background-color: #f8f7f0;
+}
+
+.achievements-section {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.achievements-section {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
+
+  /* starting state for animation */
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.card img {
+  width: 100px;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.card-left,
+.card-right {
+  flex: 0 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-center {
+  flex: 1;
+  min-width: 250px;
+}
+
+.card-center h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+
+.card-center h2 span {
+  display: block;
+  font-size: 18px;
+  margin-top: 10px;
+  color: #666;
+}
+
+.card-center p {
+  color: #444;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-left,
+  .card-right {
+    flex: unset;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .card img {
+    width: 80px;
+  }
+
+  .card-center h2 {
+    font-size: 20px;
+  }
+}
+
+.achievements-cards-header {
+  margin-bottom: 2rem;
+}
+
+.achievements-cards-header button {
+  background: #eef0d4;
+  border: none;
+  border-radius: 999px;
+  padding: 0.25rem 1rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.achievements-cards-header h2 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.achievements-cards-header h2 > span {
+  color: #16a34a;
+}
+
+.achievements-starter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.achievements-starter > div > img {
+  height: 150px;
+}
+
+.achievements-starter > div > h2 {
+  font-size: 2rem;
+  font-weight:300;
+  color: #000000;
+}
+
+.achievements-starter > div > p {
+  font-size: 12px;
+  font-weight: 300;
+  color: #4b5563;
+}
+
+.achievements-section > h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.achievements-section > hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 40px 0 40px 0;
+};

@@ -1,0 +1,158 @@
+/* about us section */
+.features-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: #ffffff;
+  flex: 1;
+  min-width: 250px;
+  padding: 30px 25px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  text-align: left;
+}
+
+.feature-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon-wrap {
+  background-color: #f7e26b;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.feature-card > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.feature-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.feature-card hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 10px 0;
+}
+
+.feature-card p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.corner-tag {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-left.animate {
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.fade-right.animate {
+  animation: fadeInRight 0.8s ease forwards;
+}
+
+.fade-top.animate {
+  animation: fadeInTop 0.8s ease forwards;
+}
+
+.fade-bottom.animate {
+  animation: fadeInBottom 0.8s ease forwards;
+}
+
+@media (max-width: 1024px) {
+  .features-section {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

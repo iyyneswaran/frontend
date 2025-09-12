@@ -1,0 +1,129 @@
+.team-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.team-section h3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.our-team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.our-team-cards > div {
+  flex: 1 1 220px;
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.our-team-cards > div > img {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.our-team-cards > div > h4 {
+  font-family: "Rum Raisin", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.our-team-cards > div > p {
+  font-family: "Rum Raisin", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  text-align: center;
+}
+
+.our-team-cards > div:nth-child(2) {
+  transform: translateY(-25px);
+}
+
+.our-team-cards > div:hover {
+  transform: translateY(-15px);
+}
+
+.our-team-cards > div:nth-child(2):hover {
+  transform: translateY(-35px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .our-team-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .our-team-cards > div {
+    max-width: 90%;
+    transform: none !important;
+  }
+
+  .our-team-cards > div:hover {
+    transform: translateY(-10px);
+  }
+}
+
+/* Contact button */
+.download-btn {
+  background-color: #f7e26b;
+  color: black;
+  margin-top: 20px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.download-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.download-btn:hover::before {
+  left: 0;
+}
+
+.download-btn {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(247, 226, 107, 0.4);
+}
+
+.line {
+    margin: 40px;
+}

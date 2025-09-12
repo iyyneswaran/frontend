@@ -1,0 +1,169 @@
+/* Customized Product Section */
+.custom-product-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f7f7eb;
+  padding: 60px 20px;
+  gap: 30px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .custom-product-section {
+    flex-direction: row;
+    justify-content: center;
+    padding: 80px;
+  }
+}
+
+.custom-product-left {
+  max-width: 500px;
+  text-align: center;
+}
+
+.custom-product-left h2 {
+  font-size: 28px;
+  color: #1b1b1b;
+  margin-bottom: 15px;
+}
+
+.custom-product-left p {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.custom-product-left button {
+  background-color: #f7e26b;
+  color: black;
+  margin-top: 20px;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.custom-product-left button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.custom-product-left button:hover::before {
+  left: 0;
+}
+
+.custom-product-left button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(247, 226, 107, 0.4);
+}
+
+.custom-product-right img {
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Modal Styling */
+.custom-modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 50, 0, 0.6);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.custom-modal-content {
+  background: #f3fff4;
+  padding: 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  animation: scaleIn 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.custom-modal-content h2 {
+  text-align: center;
+  color: #155e2d;
+  margin-bottom: 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.custom-modal-content input,
+.custom-modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.custom-modal-content textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.custom-modal-content button {
+  width: 100%;
+  padding: 12px;
+  background: #49b96d;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.custom-modal-content button:hover {
+  background: #3ea85f;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #155e2d;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.custom-hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin-bottom : 40px;
+}

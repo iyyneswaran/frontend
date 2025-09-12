@@ -1,0 +1,200 @@
+/* Reset-ish */
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Page background & centering */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FCFCF5; /* same as original */
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  padding: 24px;
+}
+
+/* Card */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+/* Back link */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 18px;
+}
+.back-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Heading */
+.login-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 6px 0 4px;
+  color: #111827;
+}
+.login-sub {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 18px;
+}
+
+.back-link {
+    padding: 5px;
+    background: transparent;
+    border: 1px solid #34a853;
+    border-radius: 10px;
+    color: #166534;
+}
+
+/* Form */
+.login-form {
+  display: grid;
+  gap: 14px;
+}
+
+.label {
+  display: block;
+}
+
+.label-text {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #374151;
+  font-weight: 600;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+  background: #ffffff;
+}
+.input::placeholder {
+  color: #9ca3af;
+}
+.input:focus {
+  border-color: #34a853; /* green focus like original */
+  box-shadow: 0 0 0 4px rgba(52,168,83,0.08);
+}
+
+/* Forget password */
+.forgot-wrap {
+  text-align: right;
+}
+.forgot-link {
+  color: #1f9a44; /* green */
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* Submit */
+.submit-btn {
+  width: 100%;
+  background: #1f9a44; /* similar to original green */
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.15s ease, transform 0.08s ease;
+}
+.submit-btn:hover:not(:disabled) {
+  background: #18763a;
+}
+.submit-btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+}
+.divider span {
+  font-size: 13px;
+  color: #9ca3af;
+  font-weight: 600;
+  padding: 0 8px;
+}
+
+/* Google wrapper */
+.google-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+#googleSignInButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.google-loading {
+  font-size: 13px;
+  color: #374151;
+}
+
+/* Signup text */
+.signup-text {
+  font-size: 14px;
+  color: #374151;
+  margin-top: 16px;
+  text-align: center;
+}
+.signup-link {
+  color: #166534;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 6px;
+}
+
+/* Small tweaks for accessibility / responsiveness */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+}
+
+/* Optional utility class you mentioned earlier */
+.login-form-span {
+  font-size: 25px;
+}

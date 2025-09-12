@@ -1,0 +1,131 @@
+/* footer section  */
+
+.footer {
+  background-color: #fefef9;
+  padding: 50px 20px 20px 20px;
+}
+
+.footer-container {
+  padding: 15px 10px 20px 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.footer-desc {
+  font-family: "signika", sans-serif;
+  font-size: 15px;
+  color: #404A3D;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons > div {
+  background-color: #F8F7F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* .social-icons i {
+    font-size: 18px;
+    color: #333;
+    background-color: #f3f3ec;
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.social-icons i:hover {
+    background-color: #d9d9d0;
+} */
+
+.footer-right {
+  flex: 2;
+  min-width: 300px;
+}
+
+.footer-heading {
+  font-family: "Signika", sans-serif;
+  font-size: 27px;
+  color: #404A3D;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.footer-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.footer-info div {
+  min-width: 150px;
+}
+
+.footer-info h4 {
+  font-family: "signika", sans-serif;
+  color: #404A3D;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.footer-info p {
+  font-family: "signika", sans-serif;
+  font-size: 14px;
+  color: #404A3D;
+  line-height: 1.6;
+}
+
+hr {
+  margin: 40px auto 20px;
+  border: none;
+  border-top: 1px solid #ccc;
+  width: 100%;
+}
+
+.footer-bottom {
+  font-family: "Signika", sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #444;
+}
+
+.footer-links a {
+  font-family: "Signika", sans-serif;
+  color: #444;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

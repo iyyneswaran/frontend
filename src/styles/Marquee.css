@@ -1,0 +1,35 @@
+.marquee-container {
+  background-color: #f5f7f0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+  font-family: 'Signika', sans-serif;
+}
+
+.marquee-track {
+  display: inline-block;
+  animation: scroll-left 25s linear infinite;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px #1f2937;
+}
+
+.marquee-track span {
+  margin: 0 1.5rem;
+  color: #4b835f;
+  -webkit-text-stroke: 0;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
