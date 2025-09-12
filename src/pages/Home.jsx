@@ -83,7 +83,7 @@ export default function Hero() {
         <div className="nav-left">
           <Link to="/" className="logo" onClick={closeMenu}>
             <img src={logo} alt="ECOPULS Logo" className="logo-image" />
-            <span>ECOPULS</span>
+            <span>Ecopuls Green private limited</span>
           </Link>
 
           {/* Hamburger (mobile) */}
