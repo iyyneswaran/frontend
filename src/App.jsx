@@ -55,7 +55,7 @@ function App() {
               <Product />
               <CustomProduct />
               <Achievements />
-              <Carousel />
+              {/* <Carousel /> */}
               <Team />
               <Feedback />
               <Contact />
