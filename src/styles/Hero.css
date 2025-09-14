@@ -2,7 +2,7 @@
   margin: 10px;
   border-radius: 20px;
   overflow: hidden;
-  position: relative !important;
+  position: relative;
   background: no-repeat center center/cover;
   min-height: 100vh;
   height: auto;
