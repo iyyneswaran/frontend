@@ -2,12 +2,12 @@
 .admin-container {
   max-width: 1200px;
   margin: 30px auto;
-  background: #f4f6f9;
+  background: #f4f6f9 !important;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12) !important;
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  color: #333333;
+  color: #333333 !important;
 }
 
 /* Header */
@@ -15,23 +15,23 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #ffffff;
+  background: #ffffff !important;
   border-radius: 10px;
   padding: 16px 22px;
   margin-bottom: 18px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
 }
 
 .admin-header h1 {
-  color: #5a8a4d;
+  color: #5a8a4d !important;
   font-weight: 700;
   margin: 0;
   font-size: 1.6rem;
 }
 
 .logout-btn {
-  background: #5a8a4d;
-  color: white;
+  background: #5a8a4d !important;
+  color: white !important;
   border: none;
   padding: 10px 16px;
   border-radius: 10px;
@@ -40,7 +40,7 @@
   transition: all 0.2s ease;
 }
 .logout-btn:hover {
-  background: #4a753f;
+  background: #4a753f !important;
 }
 
 /* Tabs */
@@ -53,9 +53,9 @@
 }
 
 .tab {
-  background: #f3f6ef;
-  border: 1px solid #e8efe0;
-  color: #6b7b66;
+  background: #f3f6ef !important;
+  border: 1px solid #e8efe0 !important;
+  color: #6b7b66 !important;
   padding: 10px 18px;
   border-radius: 20px;
   cursor: pointer;
@@ -63,20 +63,20 @@
   transition: all 0.2s ease;
 }
 .tab:hover {
-  background: #e8efe0;
+  background: #e8efe0 !important;
 }
 .tab.active {
-  background: #5a8a4d;
-  color: white;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  background: #5a8a4d !important;
+  color: white !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
 }
 
 /* Panels */
 .admin-panel {
-  background: #ffffff;
+  background: #ffffff !important;
   border-radius: 14px;
   padding: 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
   min-height: 260px;
 }
 
@@ -94,10 +94,10 @@
 .data-table thead th {
   text-align: left;
   padding: 12px;
-  background: #f4f6f9;
-  color: #5a8a4d;
+  background: #f4f6f9 !important; 
+  color: #5a8a4d !important;
   font-weight: 700;
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid #eee !important;
   font-size: 0.95rem;
 }
 
@@ -105,14 +105,14 @@
   transition: all 0.2s ease;
 }
 .data-table tbody tr:hover {
-  background: #fafafa;
+  background: #fafafa !important;
 }
 
 .data-table tbody td {
   padding: 12px;
   vertical-align: top;
-  border-bottom: 1px solid #f0f0f0;
-  color: #333333;
+  border-bottom: 1px solid #f0f0f0 !important;
+  color: #333333 !important;
 }
 
 .btn-container {
@@ -121,12 +121,12 @@
 }
 
 .muted {
-  color: #8b8b8b;
+  color: #8b8b8b !important;
   font-size: 0.88rem;
 }
 
 .error {
-  color: #d9534f;
+  color: #d9534f !important;
   margin-bottom: 12px;
   font-weight: 600;
 }
@@ -145,28 +145,28 @@
 }
 
 .delete-btn {
-  background: #d9534f;
-  color: white;
+  background: #d9534f !important;
+  color: white !important;
 }
 .delete-btn:hover {
-  background: #c03f3c;
+  background: #c03f3c !important;
 }
 
 
 .add-btn {
-  background: #5a8a4d;
-  color: white;
+  background: #5a8a4d !important;
+  color: white !important;
 }
 .add-btn:hover {
-  background: #4a753f;
+  background: #4a753f !important;
 }
 
 .update-btn {
-  background: #58c4d3;
-  color: #07343e;
+  background: #58c4d3 !important;
+  color: #07343e !important;
 }
 .update-btn:hover {
-  background: #40aab8;
+  background: #40aab8 !important;
 }
 
 /* Product grid */
@@ -177,10 +177,10 @@
 }
 
 .admin-product-card {
-  background: #fafafa;
+  background: #fafafa !important;
   border-radius: 14px;
   padding: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -188,7 +188,7 @@
 }
 .admin-product-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12) !important;
 }
 
 .admin-product-img-wrap {
@@ -196,10 +196,10 @@
   justify-content: center;
   align-items: center;
   height: 140px;
-  background: #fff;
+  background: #fff !important;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid #eee;
+  border: 1px solid #eee !important;
 }
 
 .admin-product-img {
@@ -231,7 +231,7 @@
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.55) !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -240,13 +240,13 @@
 }
 
 .modal-content {
-  background: #ffffff;
+  background: #ffffff !important;
   padding: 22px;
   border-radius: 14px;
   width: 720px;
   max-width: calc(100% - 40px);
   position: relative;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12) !important;
   animation: slideUp 0.25s ease;
 }
 
@@ -258,11 +258,11 @@
   border: none;
   font-size: 1.8rem;
   cursor: pointer;
-  color: #8b8b8b;
+  color: #8b8b8b !important;
   transition: all 0.2s ease;
 }
 .modal-close:hover {
-  color: #d9534f;
+  color: #d9534f !important;
 }
 
 /* Product form */
@@ -273,16 +273,16 @@
   margin-bottom: 12px;
   padding: 10px 12px;
   border-radius: 10px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #e6e6e6 !important;
   font-size: 0.95rem;
   transition: all 0.2s ease;
 }
 
 .product-form input:focus,
 .product-form textarea:focus {
-  border-color: #5a8a4d;
+  border-color: #5a8a4d !important;
   outline: none;
-  box-shadow: 0 0 0 2px rgba(90, 138, 77, 0.15);
+  box-shadow: 0 0 0 2px rgba(90, 138, 77, 0.15) !important;
 }
 
 .product-form textarea {
@@ -316,10 +316,10 @@
   .data-table tbody tr {
     margin-bottom: 12px;
     display: block;
-    border: 1px solid #eee;
+    border: 1px solid #eee !important;
     border-radius: 10px;
     padding: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
   }
   .modal-content {
     width: 95%;
