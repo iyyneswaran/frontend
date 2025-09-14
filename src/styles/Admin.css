@@ -1,35 +1,13 @@
-/* =============================
-   Admin Dashboard Styles
-   Enhanced Professional UI
-   ============================= */
-
-:root {
-  --primary: #5a8a4d;
-  --primary-hover: #4a753f;
-  --secondary: #58c4d3;
-  --secondary-hover: #40aab8;
-  --danger: #d9534f;
-  --danger-hover: #c03f3c;
-  --bg: #f4f6f9;
-  --panel: #ffffff;
-  --muted: #8b8b8b;
-  --text: #333333;
-  --radius: 10px;
-  --transition: all 0.2s ease;
-  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.12);
-}
-
 /* Container */
 .admin-container {
   max-width: 1200px;
   margin: 30px auto;
-  background: var(--bg);
-  border-radius: var(--radius);
+  background: #f4f6f9;
+  border-radius: 10px;
   padding: 20px;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  color: var(--text);
+  color: #333333;
 }
 
 /* Header */
@@ -37,32 +15,32 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--panel);
-  border-radius: var(--radius);
+  background: #ffffff;
+  border-radius: 10px;
   padding: 16px 22px;
   margin-bottom: 18px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .admin-header h1 {
-  color: var(--primary);
+  color: #5a8a4d;
   font-weight: 700;
   margin: 0;
   font-size: 1.6rem;
 }
 
 .logout-btn {
-  background: var(--primary);
+  background: #5a8a4d;
   color: white;
   border: none;
   padding: 10px 16px;
-  border-radius: var(--radius);
+  border-radius: 10px;
   cursor: pointer;
   font-weight: 600;
-  transition: var(--transition);
+  transition: all 0.2s ease;
 }
 .logout-btn:hover {
-  background: var(--primary-hover);
+  background: #4a753f;
 }
 
 /* Tabs */
@@ -82,23 +60,23 @@
   border-radius: 20px;
   cursor: pointer;
   font-weight: 600;
-  transition: var(--transition);
+  transition: all 0.2s ease;
 }
 .tab:hover {
   background: #e8efe0;
 }
 .tab.active {
-  background: var(--primary);
+  background: #5a8a4d;
   color: white;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 /* Panels */
 .admin-panel {
-  background: var(--panel);
+  background: #ffffff;
   border-radius: 14px;
   padding: 20px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   min-height: 260px;
 }
 
@@ -116,15 +94,15 @@
 .data-table thead th {
   text-align: left;
   padding: 12px;
-  background: var(--bg);
-  color: var(--primary);
+  background: #f4f6f9;
+  color: #5a8a4d;
   font-weight: 700;
   border-bottom: 2px solid #eee;
   font-size: 0.95rem;
 }
 
 .data-table tbody tr {
-  transition: var(--transition);
+  transition: all 0.2s ease;
 }
 .data-table tbody tr:hover {
   background: #fafafa;
@@ -134,16 +112,21 @@
   padding: 12px;
   vertical-align: top;
   border-bottom: 1px solid #f0f0f0;
-  color: var(--text);
+  color: #333333;
+}
+
+.btn-container {
+  display: flex;
+  gap: 10px;
 }
 
 .muted {
-  color: var(--muted);
+  color: #8b8b8b;
   font-size: 0.88rem;
 }
 
 .error {
-  color: var(--danger);
+  color: #d9534f;
   margin-bottom: 12px;
   font-weight: 600;
 }
@@ -154,35 +137,36 @@
 .update-btn {
   border: none;
   padding: 8px 12px;
-  border-radius: var(--radius);
+  border-radius: 10px;
   cursor: pointer;
   font-weight: 600;
-  transition: var(--transition);
+  transition: all 0.2s ease;
   font-size: 0.9rem;
 }
 
 .delete-btn {
-  background: var(--danger);
+  background: #d9534f;
   color: white;
 }
 .delete-btn:hover {
-  background: var(--danger-hover);
+  background: #c03f3c;
 }
 
+
 .add-btn {
-  background: var(--primary);
+  background: #5a8a4d;
   color: white;
 }
 .add-btn:hover {
-  background: var(--primary-hover);
+  background: #4a753f;
 }
 
 .update-btn {
-  background: var(--secondary);
+  background: #58c4d3;
   color: #07343e;
 }
 .update-btn:hover {
-  background: var(--secondary-hover);
+  background: #40aab8;
 }
 
 /* Product grid */
@@ -196,15 +180,15 @@
   background: #fafafa;
   border-radius: 14px;
   padding: 12px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   gap: 10px;
-  transition: var(--transition);
+  transition: all 0.2s ease;
 }
 .admin-product-card:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 .admin-product-img-wrap {
@@ -236,11 +220,12 @@
 }
 
 .admin-product-footer {
+  margin-top: 20px;
   display: flex;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
-  margin-top: auto;
 }
+
 
 /* Modal */
 .modal-overlay {
@@ -255,13 +240,13 @@
 }
 
 .modal-content {
-  background: var(--panel);
+  background: #ffffff;
   padding: 22px;
   border-radius: 14px;
   width: 720px;
   max-width: calc(100% - 40px);
   position: relative;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   animation: slideUp 0.25s ease;
 }
 
@@ -273,11 +258,11 @@
   border: none;
   font-size: 1.8rem;
   cursor: pointer;
-  color: var(--muted);
-  transition: var(--transition);
+  color: #8b8b8b;
+  transition: all 0.2s ease;
 }
 .modal-close:hover {
-  color: var(--danger);
+  color: #d9534f;
 }
 
 /* Product form */
@@ -287,15 +272,15 @@
   width: 100%;
   margin-bottom: 12px;
   padding: 10px 12px;
-  border-radius: var(--radius);
+  border-radius: 10px;
   border: 1px solid #e6e6e6;
   font-size: 0.95rem;
-  transition: var(--transition);
+  transition: all 0.2s ease;
 }
 
 .product-form input:focus,
 .product-form textarea:focus {
-  border-color: var(--primary);
+  border-color: #5a8a4d;
   outline: none;
   box-shadow: 0 0 0 2px rgba(90, 138, 77, 0.15);
 }
@@ -307,7 +292,8 @@
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; } to { opacity: 1; }
+  from { opacity: 0; } 
+  to { opacity: 1; }
 }
 @keyframes slideUp {
   from { transform: translateY(20px); opacity: 0; }
@@ -331,9 +317,9 @@
     margin-bottom: 12px;
     display: block;
     border: 1px solid #eee;
-    border-radius: var(--radius);
+    border-radius: 10px;
     padding: 10px;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   }
   .modal-content {
     width: 95%;

@@ -1,18 +1,6 @@
-/* frontend/src/styles/Product.css */
-
-/* Theme vars */
-:root{
-  --bg: #5B8C51;
-  --card-bg: #F8F7F0;
-  --accent: #f7e26b;
-  --text-dark: #0f1720;
-  --muted: #6b6b6b;
-  --shadow: 0 8px 20px rgba(10,10,10,0.08);
-}
-
 /* SECTION WRAPPER */
 .product-section-bg {
-  background-color: var(--bg);
+  background-color: #5B8C51;
   padding: 3.5rem 1rem;
   box-sizing: border-box;
 }
@@ -52,71 +40,60 @@
   margin: 0;
 }
 
-/* GRID: fixed-ish columns so cards keep consistent width
-   repeat(auto-fit, minmax(220px, 260px)) ensures cards don't expand to full width
-   and will wrap to new rows while keeping consistent sizing. */
+/* GRID */
 .product-card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
   gap: 1.5rem;
-  justify-content: center; /* center leftover items in last row */
+  justify-content: center;
   align-items: stretch;
   box-sizing: border-box;
   padding-top: 0.75rem;
-}
-
-/* Make rows equal height: let grid cells size, and card fills height */
-.product-card-grid {
   grid-auto-rows: 1fr;
 }
 
 /* CARD */
 .product-card {
-  background-color: var(--card-bg);
+  background-color: #F8F7F0;
   border-radius: 18px;
   padding: 14px;
   box-sizing: border-box;
-  box-shadow: var(--shadow);
+  box-shadow: 0 8px 20px rgba(10, 10, 10, 0.08);
   cursor: pointer;
   transition: transform 0.18s ease, box-shadow 0.18s ease;
   display: flex;
   flex-direction: column;
-  height: 100%; /* stretch to match row height */
+  height: 100%;
   min-height: 320px;
 }
 
-/* hover effect */
 .product-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 30px rgba(10,10,10,0.12);
+  box-shadow: 0 16px 30px rgba(10, 10, 10, 0.12);
 }
 
-/* IMAGE WRAP (first child inside product-card per your JSX) */
+/* IMAGE WRAP */
 .product-card > div:first-child {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 14px;
   overflow: hidden;
-  /* background: #ffffff; */
   padding: 10px;
   box-sizing: border-box;
-  /* make image area uniform square */
   aspect-ratio: 1 / 1;
   width: 100%;
 }
 
-/* Image itself */
 .product-card-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* fills the frame elegantly */
+  object-fit: cover;
   display: block;
   transform-origin: center;
   border-radius: 20px;
 }
 
-/* Exception for tall product images (like gunny bag) to avoid crop */
 .gunny_bag {
   object-fit: contain !important;
   width: auto !important;
@@ -126,7 +103,7 @@
 /* Separator */
 .product-card hr {
   border: none;
-  border-top: 1px solid rgba(0,0,0,0.06);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
   margin: 14px 0;
 }
 
@@ -144,30 +121,30 @@
 .product-card > .cost > h3 a {
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--text-dark);
+  color: #0f1720;
   margin: 0;
   line-height: 1.1;
 }
 
 .product-card > .cost > span {
   font-size: 1rem;
-  color: var(--text-dark);
+  color: #0f1720;
   white-space: nowrap;
 }
 
-/* Description text - allow it to grow and sit at bottom if space remains */
+/* Description */
 .product-card p {
-  color: var(--muted);
+  color: #6b6b6b;
   margin: 0;
   margin-top: 8px;
   font-size: 0.95rem;
   line-height: 1.45;
-  flex: 1 1 auto; /* take remaining vertical space so cards align evenly */
+  flex: 1 1 auto;
 }
 
-/* small corner tag / circular action is optional; keep styling */
+/* small corner tag */
 .product-corner-tag {
-  background-color: var(--accent);
+  background-color: #f7e26b;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -176,7 +153,7 @@
   justify-content: center;
 }
 
-/* MODAL (unchanged, but keep here to ensure styling) */
+/* MODAL */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -238,7 +215,6 @@
   to { opacity: 1; transform: scale(1); }
 }
 
-/* Entry animations kept (class-based in JSX) */
 @keyframes fadeInLeft { from { opacity: 0; transform: translateX(-40px);} to {opacity:1; transform:translateX(0);} }
 @keyframes fadeInRight { from { opacity: 0; transform: translateX(40px);} to {opacity:1; transform:translateX(0);} }
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px);} to {opacity:1; transform:translateY(0);} }
@@ -250,8 +226,6 @@
 .fadeInDown { animation: fadeInDown 0.8s ease forwards; }
 
 /* RESPONSIVE ADJUSTMENTS */
-
-/* medium screens: slightly reduce card min width */
 @media (max-width: 1100px) {
   .product-card-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 240px));
@@ -260,7 +234,6 @@
   .product-card { min-height: 300px; }
 }
 
-/* tablets */
 @media (max-width: 800px) {
   .product-cards-section { padding: 1.75rem 0.75rem; }
   .product-cards-header h2 { font-size: 1.6rem; }
@@ -272,10 +245,9 @@
   .modal-img { width: 180px; height: 180px; }
 }
 
-/* small phones: single column */
 @media (max-width: 480px) {
   .product-card-grid {
-    grid-template-columns: 1fr; /* single column */
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
   .product-card { min-height: auto; }
@@ -283,7 +255,7 @@
   .product-cards-section { padding-left: 0.75rem; padding-right: 0.75rem; }
 }
 
-/* small polish: ensure images don't create overflow */
+/* small polish */
 .product-card-img,
 .gunny_bag {
   max-width: 100%;

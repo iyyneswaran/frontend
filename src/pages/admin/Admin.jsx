@@ -1,6 +1,7 @@
 // frontend/src/Admin.jsx
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { RiDeleteBinLine } from "@remixicon/react";
 import "../../styles/Admin.css";
 const API = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
@@ -408,7 +409,7 @@ export default function Admin() {
                     <h4>{p.name}</h4>
                     <p className="muted">{p.description}</p>
                     <div className="admin-product-footer">
-                      <button className="delete-btn" onClick={() => handleDeleteProduct(p._id)}>🗑</button>
+                      <button className="delete-btn" onClick={() => handleDeleteProduct(p._id)}><RiDeleteBinLine className="delete-icon"/></button>
                       <button className="update-btn" onClick={() => openEditProduct(p)}>Update</button>
                     </div>
                   </div>
@@ -433,7 +434,7 @@ export default function Admin() {
                     <td><strong>{u.name || "—"}</strong><div className="muted">{u.email}</div></td>
                     <td>{u.isAdmin ? "Yes" : "No"}</td>
                     <td className="muted">{new Date(u.createdAt).toLocaleString()}</td>
-                    <td>
+                    <td className="btn-container">
                       <button className="update-btn" onClick={() => toggleAdmin(u)}>{u.isAdmin ? "Revoke" : "Make Admin"}</button>
                       <button className="delete-btn" onClick={() => handleDeleteUser(u._id)}>Delete</button>
                     </td>
@@ -455,7 +456,7 @@ export default function Admin() {
               <input name="name" placeholder="Product name" value={productForm.name} onChange={handleProductFormChange} required />
               <input name="price" placeholder="Price (number)" value={productForm.price} onChange={handleProductFormChange} />
               <textarea name="description" placeholder="Description" value={productForm.description} onChange={handleProductFormChange} />
-              <label className="muted">Image: upload a file (preferred) or paste external image URL below</label>
+              <label className="">Image: upload a file (preferred) or paste external image URL below</label>
               <input type="file" accept="image/*" name="imageFile" onChange={handleProductFormChange} />
               <input name="imageUrl" placeholder="Image URL (optional)" value={productForm.imageUrl} onChange={handleProductFormChange} />
               <div style={{ display: "flex", gap: 8 }}>
