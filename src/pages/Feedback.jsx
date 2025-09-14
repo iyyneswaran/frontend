@@ -83,8 +83,8 @@ export default function Feedback() {
           <h2>🌿 We value your feedback!</h2>
 
           <form id="feedbackForm" onSubmit={handleSubmit}>
-            <input type="text" placeholder="Your Name (optional)" name="name" />
-            <input type="email" placeholder="Email or Phone (optional)" name="email" />
+            <input type="text" placeholder="Your Name" name="name" />
+            <input type="email" placeholder="Email or Phone" name="email" />
 
             <label className="label">Your Experience:</label>
             <div className="rating">
