@@ -1,6 +1,7 @@
 // frontend/src/pages/Login.jsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styles/Login.css";
 
 const API = import.meta.env.VITE_API_URL || "http://localhost:5000";
@@ -109,7 +110,7 @@ export default function Login() {
 
         <p className="signup-text">
           Create a New Account?{" "}
-          <a className="signup-link" href="/register">Sign Up</a>
+          <Link className="signup-link" to="/register">Sign Up</Link>
         </p>
       </div>
     </div>
