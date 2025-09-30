@@ -7,12 +7,18 @@ export default function Product() {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [animate, setAnimate] = useState(false);
+  const [selectedVariantIndex, setSelectedVariantIndex] = useState(0);
 
   useEffect(() => {
     setAnimate(true);
     fetchProducts();
     // eslint-disable-next-line
   }, []);
+
+  useEffect(() => {
+    // reset variant selection whenever modal product changes
+    setSelectedVariantIndex(0);
+  }, [selectedProduct]);
 
   const fetchProducts = async () => {
     try {
@@ -22,8 +28,15 @@ export default function Product() {
       setProducts(Array.isArray(data) ? data : []);
     } catch (err) {
       console.error("Error fetching products:", err);
-      // optionally fallback to a static set here
     }
+  };
+
+  const getCardPriceDisplay = (product) => {
+    if (product.sizes && product.sizes.length) {
+      const min = Math.min(...product.sizes.map((s) => Number(s.price || 0)));
+      return `From ₹${Number(min).toLocaleString()}`;
+    }
+    return `₹${Number(product.price || 0).toLocaleString()}`;
   };
 
   return (
@@ -49,7 +62,7 @@ export default function Product() {
                     : "fadeInRight"
                   : ""
               }`}
-              onClick={() => setSelectedProduct(product)}
+              onClick={() => { setSelectedProduct(product); setSelectedVariantIndex(0); }}
             >
               <div>
                 <img
@@ -66,7 +79,7 @@ export default function Product() {
               <div className="cost">
                 <h3>{product.name}</h3>
                 <span>
-                  <strong>₹{Number(product.price).toLocaleString()}</strong>
+                  <strong>{getCardPriceDisplay(product)}</strong>
                 </span>
               </div>
               <p>{product.description}</p>
@@ -80,10 +93,46 @@ export default function Product() {
         <div className="modal-overlay" onClick={() => setSelectedProduct(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={() => setSelectedProduct(null)}>&times;</button>
+
             <img src={selectedProduct.imageUrl ? `${API}${selectedProduct.imageUrl}` : "/placeholder-product.png"} alt={selectedProduct.name} className="modal-img" />
             <h2>{selectedProduct.name}</h2>
-            <p className="modal-price">₹{Number(selectedProduct.price).toLocaleString()}</p>
+
+            {/* Price display (selected variant or fallback) */}
+            <p className="modal-price">
+              {selectedProduct.sizes && selectedProduct.sizes.length
+                ? `₹${Number((selectedProduct.sizes[selectedVariantIndex] || {}).price || 0).toLocaleString()}`
+                : `₹${Number(selectedProduct.price || 0).toLocaleString()}`
+              }
+            </p>
+
             <p className="modal-desc">{selectedProduct.description}</p>
+
+            {/* Size/variant selector */}
+            <div className="size-selector-wrapper">
+              {selectedProduct.sizes && selectedProduct.sizes.length ? (
+                <div className="size-selector">
+                  {selectedProduct.sizes.map((s, idx) => (
+                    <div
+                      key={idx}
+                      className={`size-box ${selectedVariantIndex === idx ? "active" : ""}`}
+                      onClick={() => setSelectedVariantIndex(idx)}
+                    >
+                      <div className="size-price">₹{Number(s.price || 0).toLocaleString()}</div>
+                      <div className="size-label">{s.label}</div>
+                      <div className="size-dim">{s.dimension}</div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="muted" style={{ marginTop: 8 }}>No size variants</div>
+              )}
+            </div>
+
+            {/* action: just a placeholder - you can wire add-to-cart here */}
+            {/* <div style={{ marginTop: 12 }}>
+              <button className="add-btn">Add to Cart</button>
+              <button className="muted" style={{ marginLeft: 8 }} onClick={() => setSelectedProduct(null)}>Close</button>
+            </div> */}
           </div>
         </div>
       )}

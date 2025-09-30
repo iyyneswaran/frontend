@@ -225,6 +225,62 @@
 .fadeInUp { animation: fadeInUp 0.8s ease forwards; }
 .fadeInDown { animation: fadeInDown 0.8s ease forwards; }
 
+/* VARIANT / SIZE SELECTOR (modal) */
+.size-selector-wrapper {
+  margin-top: 12px;
+}
+
+.size-selector {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.size-box {
+  min-width: 110px;
+  max-width: 140px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.12);
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+  transition: transform 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
+  background: #fff;
+}
+
+.size-box:hover { transform: translateY(-3px); }
+
+.size-box.active {
+  border-color: rgba(110, 47, 201, 0.9); /* a subtle violet accent */
+  box-shadow: 0 6px 18px rgba(110,47,201,0.08);
+  transform: translateY(-4px);
+}
+
+.size-price {
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.size-label {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: none;
+  margin-bottom: 4px;
+}
+
+.size-dim {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* small responsive adjustments */
+@media (max-width: 600px) {
+  .size-box { min-width: 95px; padding: 8px; }
+}
+
 /* RESPONSIVE ADJUSTMENTS */
 @media (max-width: 1100px) {
   .product-card-grid {

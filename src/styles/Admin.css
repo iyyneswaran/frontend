@@ -290,6 +290,39 @@
   resize: vertical;
 }
 
+/* variant editor in admin product modal */
+.variants-editor {
+  margin-top: 8px;
+  display: block;
+}
+
+.variant-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.variant-row input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.12);
+  flex: 1;
+}
+
+.variant-row input:nth-child(1) { flex: 1.2; } /* label */
+.variant-row input:nth-child(2) { width: 90px; }   /* price */
+.variant-row input:nth-child(3) { width: 140px; }  /* dimension */
+
+.variant-row .muted {
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px dashed rgba(0,0,0,0.08);
+  cursor: pointer;
+}
+
+
 /* Animations */
 @keyframes fadeIn {
   from { opacity: 0; } 

@@ -129,3 +129,7 @@ hr {
 .footer-links a:hover {
   text-decoration: underline;
 }
+
+.yt-icon {
+  color: #668b57;
+}
